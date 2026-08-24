@@ -1,0 +1,329 @@
+/* =====================================================
+  CONFIGURAÇÕES GERAIS
+  ===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* =====================================================
+  CABEÇALHO
+  ===================================================== */
+header {
+    background-color: #1f2937;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+/* =====================================================
+  NAVEGAÇÃO
+  ===================================================== */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* =====================================================
+  CONTEÚDO PRINCIPAL
+  ===================================================== */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* =====================================================
+  SEÇÕES
+  ===================================================== */
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+section h3 {
+    margin: 25px 0 15px;
+    color: #374151;
+}
+
+/* =====================================================
+  FORMULÁRIO
+  ===================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* =====================================================
+  CAMPOS PREENCHIDOS PELO CEP
+  ===================================================== */
+#logradouro,
+#bairro,
+#cidade,
+#estado {
+    background-color: #f1f5f9;
+}
+
+/* =====================================================
+  BOTÃO
+  ===================================================== */
+button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* =====================================================
+  AÇÕES DO FORMULÁRIO (Cadastrar / Cancelar edição)
+  ===================================================== */
+.acoesFormulario {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.botaoSecundario {
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: white;
+    color: #374151;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botaoSecundario:hover {
+    background-color: #f1f5f9;
+}
+
+/* =====================================================
+  AÇÕES DA TABELA (Editar / Excluir)
+  ===================================================== */
+.colunaAcoes {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.botaoEditar,
+.botaoExcluir {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.botaoEditar {
+    background-color: #2563eb;
+}
+
+.botaoEditar:hover {
+    background-color: #1d4ed8;
+}
+
+.botaoExcluir {
+    background-color: #dc2626;
+}
+
+.botaoExcluir:hover {
+    background-color: #b91c1c;
+}
+
+#statusLista {
+    min-height: 20px;
+    margin-bottom: 10px;
+    color: #2563eb;
+    font-size: 14px;
+}
+
+/* =====================================================
+  MENSAGENS DE ERRO
+  ===================================================== */
+.erro {
+    min-height: 20px;
+    margin-top: 4px;
+    color: #dc2626;
+    font-size: 14px;
+}
+
+#statusCep {
+    min-height: 20px;
+    margin-top: 4px;
+    color: #2563eb;
+    font-size: 14px;
+}
+
+#mensagem {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* =====================================================
+  TABELA
+  ===================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+caption {
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    text-align: left;
+}
+
+th {
+    background-color: #e5e7eb;
+    font-weight: bold;
+}
+
+/* =====================================================
+  RODAPÉ
+  ===================================================== */
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* =====================================================
+  RESPONSIVIDADE
+  ===================================================== */
+@media (max-width: 700px) {
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+
+/* =====================================================
+  TELAS PEQUENAS
+  ===================================================== */
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .campo input,
+    .campo select,
+    button {
+        font-size: 15px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

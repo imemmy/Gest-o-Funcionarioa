@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sistema de Gestão</h1>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="#cadastro">Cadastro</a></li>
+                <li><a href="#visualizacao">Visualização</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="cadastro">
+            <h2 id="tituloFormulario">Cadastro de Funcionário</h2>
+            <form id="formularioFuncionario" novalidate>
+                <input type="hidden" id="funcionarioId" name="funcionarioId">
+
+                <div class="campo">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite o nome" required>
+                    <small id="erroNome" class="erro"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="email@empresa.com" required>
+                    <small id="erroEmail" class="erro"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="cargo">Cargo</label>
+                    <select id="cargo" name="cargo" required>
+                        <option value="">Selecione um cargo</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Gerente">Gerente</option>
+                        <option value="Analista">Analista</option>
+                        <option value="Assistente">Assistente</option>
+                    </select>
+                    <small id="erroCargo" class="erro"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                    <small id="erroTelefone" class="erro"></small>
+                </div>
+
+                <h3>Endereço</h3>
+
+                <div class="campo">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" inputmode="numeric"
+                        required>
+                    <small id="statusCep"></small>
+                    <small id="erroCep" class="erro"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="logradouro">Logradouro</label>
+                    <input type="text" id="logradouro" name="logradouro" readonly>
+                </div>
+
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" readonly>
+                </div>
+
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" readonly>
+                </div>
+
+                <div class="campo">
+                    <label for="estado">Estado</label>
+                    <input type="text" id="estado" name="estado" readonly>
+                </div>
+
+                <div class="acoesFormulario">
+                    <button type="submit" id="botaoSalvar">Cadastrar</button>
+                    <button type="button" id="botaoCancelar" class="botaoSecundario" hidden>Cancelar edição</button>
+                </div>
+                <p id="mensagem" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section id="visualizacao">
+            <h2>Funcionários Cadastrados</h2>
+            <p id="statusLista" aria-live="polite"></p>
+            <table>
+                <caption>
+                    Relação de funcionários cadastrados
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Cargo</th>
+                        <th>Telefone</th>
+                        <th>Cidade/UF</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                    <!-- Preenchido dinamicamente via API -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Sistema de Gestão © 2026
+        </p>
+    </footer>
+
+    <!-- JavaScript da aplicação -->
+    <script src="script.js"></script>
+</body>
+
+</html>
